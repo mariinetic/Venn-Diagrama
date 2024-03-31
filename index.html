@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjunto e Diagrama de Venn</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CONJUNTO E DIAGRAMA DE VENN</h1>
+    <div class="venn-container">
+        <svg width="500" height="400">
+            <!-- Círculo A -->
+            <circle class="venn-circle" cx="100" cy="200" r="100"></circle>
+            <text class="circle-text" id="textA" x="100" y="200"></text>
+            <!-- Círculo B -->
+            <circle class="venn-circle" cx="250" cy="200" r="100"></circle>
+            <text class="circle-text" id="textB" x="250" y="200"></text>
+            <!-- ordem dos círculos-->
+            <circle class="venn-circle" cx="400" cy="200" r="100"></circle>
+            <text class="circle-text" id="textC" x="400" y="200"></text>
+        </svg>
+    </div>
+    <div class="controls">
+        <label for="a">Conjunto A:</label>
+        <input type="text" id="a" placeholder="A" maxlength="10"> 
+        <label for="b">Conjunto B:</label>
+        <input type="text" id="b" placeholder="B" maxlength="10">
+        <label for="c">Conjunto C:</label>
+        <input type="text" id="c" placeholder="C" maxlength="10">
+        <button onclick="updateVennDiagram()">Atualizar</button>
+    </div>
+    <script>
+        // Atualiza o diagrama quando o botão é clicado
+        function updateVennDiagram() {
+            const a = document.getElementById('a').value.replace(".", ",") || ""; // Joga em A
+            const b = document.getElementById('b').value.replace(".", ",") || ""; // Joga em B
+            const c = document.getElementById('c').value.replace(".", ",") || ""; // Joga em C
+
+            // No minimo 10 valores
+            const aText = a.length > 10 ? a.substring(0, 15) : a;
+            const bText = b.length > 10 ? b.substring(0, 15) : b;
+            const cText = c.length > 10 ? c.substring(0, 15) : c;
+
+            // Joga os números pra dentro do diagrama
+            document.getElementById('textA').textContent = aText;
+            document.getElementById('textB').textContent = bText;
+            document.getElementById('textC').textContent = cText;
+        }
+        
+    </script>
+    <div><script src="script.js"></script></div>
+</body>
+</html>

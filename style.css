@@ -1,0 +1,52 @@
+/* Aqui faço a estilização(Botões em ordem) (min 58:00)*/
+body {
+    background-color: #ffcccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial Black', sans-serif; 
+}
+h1 {
+    font-size: 36px;
+    font-weight: bold; 
+    color: #333;
+    text-align: center; 
+    margin: 20px 0; 
+}
+.venn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.venn-circle {
+    fill: transparent; 
+    stroke: #333;
+    stroke-width: 2;
+}
+.circle-text {
+    font-family: Arial, sans-serif;
+    font-size: 18px; 
+    text-anchor: middle;
+    fill: #333;
+}
+input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px; 
+}
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+}
+label {
+    margin-right: 5px; 
+}
+button {
+    margin-left: 10px; 
+}
